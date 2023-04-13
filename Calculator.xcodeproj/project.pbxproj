@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82150FCC29E8779F000A62E4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82150FCB29E8779F000A62E4 /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8270C3FF29E828CD008C229D /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270C3FE29E828CD008C229D /* CalculatorApp.swift */; };
 		8270C40129E828CD008C229D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270C40029E828CD008C229D /* ContentView.swift */; };
 		8270C40329E828CE008C229D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270C40229E828CE008C229D /* Assets.xcassets */; };
 		8270C40629E828CE008C229D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270C40529E828CE008C229D /* Preview Assets.xcassets */; };
+		827DB15B29E868F800E2D2AC /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = 827DB15A29E868F800E2D2AC /* MathParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82150FCB29E8779F000A62E4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8270C3FB29E828CD008C229D /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8270C3FE29E828CD008C229D /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		8270C40029E828CD008C229D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +29,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82150FCC29E8779F000A62E4 /* XCTest.framework in Frameworks */,
+				827DB15B29E868F800E2D2AC /* MathParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82150FCA29E8775E000A62E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82150FCB29E8779F000A62E4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8270C3F229E828CD008C229D = {
 			isa = PBXGroup;
 			children = (
 				8270C3FD29E828CD008C229D /* Calculator */,
 				8270C3FC29E828CD008C229D /* Products */,
+				82150FCA29E8775E000A62E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +97,9 @@
 			dependencies = (
 			);
 			name = Calculator;
+			packageProductDependencies = (
+				827DB15A29E868F800E2D2AC /* MathParser */,
+			);
 			productName = Calculator;
 			productReference = 8270C3FB29E828CD008C229D /* Calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 8270C3F229E828CD008C229D;
+			packageReferences = (
+				827DB15929E868F800E2D2AC /* XCRemoteSwiftPackageReference "swift-math-parser" */,
+			);
 			productRefGroup = 8270C3FC29E828CD008C229D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		827DB15929E868F800E2D2AC /* XCRemoteSwiftPackageReference "swift-math-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bradhowes/swift-math-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		827DB15A29E868F800E2D2AC /* MathParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 827DB15929E868F800E2D2AC /* XCRemoteSwiftPackageReference "swift-math-parser" */;
+			productName = MathParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8270C3F329E828CD008C229D /* Project object */;
 }
